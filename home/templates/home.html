@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-grid {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
+            background-size: 40px 40px;
+            animation: fadeIn 2s forwards;
+        }
+
+        .card {
+            background-color: rgb(24, 24, 27);
+            border-radius: 1rem;
+            padding: 3rem;
+            max-width: 42rem;
+            width: 90%;
+            text-align: center;
+            border: 1px solid rgb(39, 39, 42);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.6s forwards;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: slideDown 0.6s 0.2s forwards;
+        }
+
+        .description {
+            color: rgb(161, 161, 170);
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeIn 0.6s 0.4s forwards;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 0.6s 0.6s forwards;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            width: 100%;
+            max-width: 24rem;
+            background-color: white;
+            color: rgb(24, 24, 27);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            background-color: rgb(245, 245, 245);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
+        .button svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            transition: transform 0.3s ease;
+        }
+
+        .button:hover svg {
+            transform: scale(1.1);
+        }
+
+        .tagline {
+            margin-top: 2rem;
+            color: rgb(113, 113, 122);
+            font-size: 0.875rem;
+            opacity: 0;
+            animation: fadeIn 0.6s 0.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-grid"></div>
+    
+    <div class="card">
+        <h1>Welcome to Resume Tools</h1>
+        <p class="description">Choose one of the options below to get started:</p>
+        
+        <div class="buttons">
+            <a href="/resume/" class="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                </svg>
+                Resume Builder
+            </a>
+            
+            <a href="/resume_analyzer/" class="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"/>
+                    <line x1="12" y1="20" x2="12" y2="4"/>
+                    <line x1="6" y1="20" x2="6" y2="14"/>
+                </svg>
+                Resume Analyzer
+            </a>
+        </div>
+
+        <div class="tagline">
+            Professional tools for your career journey
+        </div>
+    </div>
+</body>
+</html>
