@@ -11,7 +11,7 @@ import google.generativeai as genai
 from django.core.files.storage import FileSystemStorage
 
 # Configure Gemini AI
-genai.configure(api_key='AIzaSyD0knw8oD1QJFryNDF3tmkwuNrWH2mDQ7Q')
+genai.configure(api_key='YOUR GEMINI API')
 
 def analyze_resume(request):
     return render(request, 'analysis.html')
@@ -25,8 +25,8 @@ def get_gemini_response(input_prompt, pdf_content, job_description):
 def input_pdf_setup(uploaded_file):
     if uploaded_file is not None:
         # Convert the PDF to image
-        #images = pdf2image.convert_from_bytes(uploaded_file.read())
-        images = pdf2image.convert_from_bytes(uploaded_file.read(), poppler_path=r'C:/Program Files/poppler-24.08.0/Library/bin')
+        images = pdf2image.convert_from_bytes(uploaded_file.read())
+        #images = pdf2image.convert_from_bytes(uploaded_file.read(), poppler_path=r'POPPLER PATH') //Use if it gives poppler error 
         first_page = images[0]
 
         # Convert to bytes
