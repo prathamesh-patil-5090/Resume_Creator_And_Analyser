@@ -1,4 +1,4 @@
-Resume Creator and Analyser
+#Resume Creator and Analyser
 A powerful tool designed to simplify resume creation and analysis. This application enables users to generate professional resumes and analyze them for key metrics, such as compatibility with Applicant Tracking Systems (ATS), keyword optimization, and overall quality.
 
 Features
@@ -19,19 +19,22 @@ Installation
 Clone the repository:
 
 bash
-Copy code
+```
 git clone https://github.com/prathamesh-patil-5090/Resume_Creator_And_Analyser.git
 cd Resume_Creator_And_Analyser
+```
 Install the required dependencies:
 
 bash
-Copy code
+```
 pip install -r requirements.txt
+```
 Run the application:
-
+```
 bash
 Copy code
-python app.py
+python manage.py runserver
+```
 Access the app at http://localhost:5000 in your browser.
 
 Usage
