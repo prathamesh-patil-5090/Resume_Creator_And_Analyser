@@ -17,22 +17,16 @@ Machine Learning: NLP for keyword extraction and sentiment analysis (if used).
 Deployment: Docker/Heroku/AWS.
 Installation
 Clone the repository:
-
-bash
 ```
 git clone https://github.com/prathamesh-patil-5090/Resume_Creator_And_Analyser.git
 cd Resume_Creator_And_Analyser
 ```
 Install the required dependencies:
-
-bash
 ```
 pip install -r requirements.txt
 ```
 Run the application:
 ```
-bash
-Copy code
 python manage.py runserver
 ```
 Access the app at http://localhost:5000 in your browser.
@@ -53,17 +47,18 @@ Contributions are welcome! Follow these steps to contribute:
 
 Fork the repository.
 Create a new branch:
-bash
-Copy code
+
+```
 git checkout -b feature-name
+```
 Commit your changes:
-bash
-Copy code
+```
 git commit -m "Add a new feature"
+```
 Push to the branch:
-bash
-Copy code
+```
 git push origin feature-name
+```
 Submit a pull request.
 License
 This project is licensed under the MIT License.
