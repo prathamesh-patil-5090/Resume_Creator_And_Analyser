@@ -1,4 +1,5 @@
-#Resume Creator and Analyser
+# Resume Creator and Analyser
+
 A powerful tool designed to simplify resume creation and analysis. This application enables users to generate professional resumes and analyze them for key metrics, such as compatibility with Applicant Tracking Systems (ATS), keyword optimization, and overall quality.
 
 Features
